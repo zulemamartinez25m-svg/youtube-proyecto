@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Feed Dashboard - YouTube API</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fuente Google Fonts para un diseño moderno -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <span class="icon">▶</span>
+            <h1>Social Media Dashboard</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Configuración de API Key -->
+        <section class="api-key-section">
+            <label for="api-key-input">API Key de YouTube Data v3:</label>
+            <input type="password" id="api-key-input" placeholder="Pega tu API Key de Google Cloud aquí...">
+        </section>
+
+        <!-- Barra de Búsqueda -->
+        <section class="search-section">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Buscar vídeos, temas o hashtags...">
+                <button id="search-btn">Buscar / Cargar Feed</button>
+            </div>
+        </section>
+
+        <!-- Estado de Carga y Mensajes de Error -->
+        <div id="status-message" class="status-message hidden"></div>
+
+        <!-- Contenedor Dinámico de Tarjetas -->
+        <section id="feed-container" class="feed-grid">
+            <!-- Las tarjetas dinámicas se renderizarán aquí mediante JavaScript -->
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
